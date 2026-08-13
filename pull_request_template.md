@@ -3,10 +3,13 @@
 <!-- pr:what -->
 <!-- One or two sentences. -->
 
+## Ticket
+
+<!-- pr:ticket -->
+
 ## Why
 
 <!-- pr:why -->
-<!-- Fixes #123 / JIRA-456 -->
 
 ## How
 
