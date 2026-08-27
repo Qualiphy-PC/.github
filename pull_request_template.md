@@ -7,6 +7,17 @@
 
 <!-- pr:ticket -->
 
+## Sensitive scope
+
+<!-- pr:scope -->
+<!-- DELETE THIS SECTION if none apply. If any apply, the PR TITLE must say so
+     too — a title that under-reports scope is grounds to request changes. -->
+
+- [ ] Changes **authorization** (who can see or do what)
+- [ ] Changes a **money path** (charges, refunds, prices, COGS, payouts)
+- [ ] Changes **endpoint semantics** or a response shape others consume
+- [ ] Changes **schema** (fill in the Database section below)
+
 ## Why
 
 <!-- pr:why -->
@@ -18,10 +29,15 @@
 ## Testing
 
 <!-- pr:testing -->
+<!-- The question a reviewer asks: WHICH TEST FAILS if this PR's new behavior
+     regresses? "The old suite still passes" is not an answer. -->
 
 - [ ] `npm run lint` passes
 - [ ] `npm test` passes
 - [ ] Ran locally and exercised the change
+- [ ] **New behavior has new tests** — happy path AND failure cases (name them above)
+- [ ] **Bug fix?** The regression test fails on the code before this PR and passes
+      after — run it at the merge base and at the head, note both results above
 
 ## Database
 
@@ -52,6 +68,18 @@
 **New env vars or secrets:** <!-- names only, never values. Where they're set. -->
 
 **Rollback:** <!-- how to undo, including the manual parts -->
+
+## Touch points
+
+<!-- pr:touch_points -->
+<!-- DELETE THIS SECTION if the PR changes no contract surface: endpoints,
+     shared tables, response keys, events/webhooks, shared packages. -->
+
+**What surface changes:** <!-- endpoint / table+column / response key / event -->
+
+**Who consumes it:** <!-- callers across the estate — grep the sibling repos and
+     check qualiphy-platform/docs/service-dependencies.md — plus external API
+     clients where relevant. Say what you checked, not just what you believe. -->
 
 ## Cross-repo
 
